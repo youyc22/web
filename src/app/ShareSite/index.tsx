@@ -19,7 +19,7 @@ const ShareSite: React.FC<PageProps> = ({ mode, user }) => {
   const StyledHeader = styled(Header)`
     display: flex;
     align-items: center;
-    z-index: 99;
+    z-index: 100;
     height: 48px;
     width: 100%;
     background-color: ${mode === "light" ? `white` : `#141414`};
