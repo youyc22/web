@@ -1336,7 +1336,7 @@ const MentorApplicationPage: React.FC<PageProps> = ({ mode, user }) => {
           )}
 
           {user.role === "student" && (
-            <Card>
+            <Card hoverable>
               <Typography.Title level={2}>已申请</Typography.Title>
               <List
                 loading={mentorApplicationsListForStudentLoading}

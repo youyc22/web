@@ -26,6 +26,7 @@ const Resource: React.FC<ResourceProps> = ({
   return (
     <Card
       bordered
+      hoverable
       style={{
         marginLeft: "5%",
         marginRight: "5%",

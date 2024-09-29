@@ -324,21 +324,16 @@ const WeeklyPage: React.FC<PageProps> = ({ mode, user }) => {
         <table style={{ margin: "0 auto" }}>
           <tbody>
             <tr>
-              <td title="仅系统管理员在登录后可进入编辑模式">
+              {(user.role === "counselor" || user.role === "root") && (
                 <Radio.Group
                   defaultValue={"browse"}
                   value={showMode}
                   onChange={(e) => setShowMode(e.target.value)}
                 >
                   <Radio.Button value="browse">浏览模式</Radio.Button>
-                  <Radio.Button
-                    value="edit"
-                    disabled={user.role !== "counselor" && user.role !== "root"}
-                  >
-                    编辑模式
-                  </Radio.Button>
+                  <Radio.Button value="edit">编辑模式</Radio.Button>
                 </Radio.Group>
-              </td>
+              )}
               <td>
                 <Pagination
                   showQuickJumper

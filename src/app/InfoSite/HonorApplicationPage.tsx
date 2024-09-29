@@ -800,6 +800,8 @@ const HonorApplicationPage: React.FC<PageProps> = ({ mode, user }) => {
             <Form
               form={form}
               name="application"
+              labelCol={{ span: 6 }}
+              wrapperCol={{ span: 16 }}
               onFinish={handleApplicationEdit}
               initialValues={editingApplication}
             >
