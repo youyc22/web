@@ -8,7 +8,7 @@ const account = {
   username: "xuesheng",
   email: "xuesheng@test.com",
   phone: "19168067312",
-  password: "Abc!11111111",
+  password: "Abc!321a&",
 };
 
 async function login(page: Page, user: string, password: string) {
