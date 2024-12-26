@@ -108,7 +108,7 @@ const InfiniteScrollContainer: React.FC<ScrollContainerProps> = ({
   const [isScrolling] = useState(false);
   const [content, setContent] = useState<React.ReactNode[]>([]); // To hold original and cloned content
   const isPaused = useRef(false);
-  const animationFrameRef = useRef<number>(null);
+  const animationFrameRef = useRef<number>(0);
 
   useEffect(() => {
     // Set the content (original + duplicate) only when the children change
@@ -205,7 +205,7 @@ const HomeSite: React.FC<PageProps> = ({ mode, user }) => {
         <br />
 
         {/* 内容区域 */}
-        <div style={{ width: "100%", maxWidth: "90vw", margin: "0 auto" }}>
+        <div style={{ width: "100%", padding: "24px" }}>
           {/* 部门展示区 */}
           <SectionTitle>部门</SectionTitle>
           <InfiniteScrollContainer scrollSpeed={1.5}>
